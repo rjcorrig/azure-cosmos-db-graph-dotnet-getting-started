@@ -2,9 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Configuration;
     using System.Linq;
+    using System.Reflection;
+    using System.Runtime.Versioning;
     using System.Threading.Tasks;
+    using Microsoft.Extensions.Configuration;
     using Microsoft.Azure.Documents;
     using Microsoft.Azure.Documents.Client;
     using Microsoft.Azure.Documents.Linq;
@@ -23,8 +25,14 @@
         /// <param name="args">command-line arguments</param>
         public static void Main(string[] args)
         {
-            string endpoint = ConfigurationManager.AppSettings["Endpoint"];
-            string authKey = ConfigurationManager.AppSettings["AuthKey"];
+            IConfigurationRoot builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            string endpoint = builder["cosmosDBConnection:endpoint"];
+            string authKey = builder["cosmosDBConnection:authkey"];
+
+            Console.WriteLine($"Running GraphGetStarted {((TargetFrameworkAttribute)Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(TargetFrameworkAttribute), false)[0]).FrameworkName }");
 
             using (DocumentClient client = new DocumentClient(
                 new Uri(endpoint),
