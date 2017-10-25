@@ -1,5 +1,5 @@
 # Getting started with Azure Cosmos DB: Graph API
-[Azure Cosmos DB](http://cosmosdb.com) is a globally distributed, multi-model database for mission critical applications. Azure Cosmos DB provides the [Graph API](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction) for applications that need to model, query, and traverse large graphs efficiently using the [Gremlin standard](http://tinkerpop.apache.org/docs/current/reference/#graph-traversal-steps). Azure Cosmos DB's graph API is currently in public preview.
+[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) is a globally distributed, multi-model database for mission critical applications. Azure Cosmos DB provides the [Graph API](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction) for applications that need to model, query, and traverse large graphs efficiently using the [Gremlin standard](https://tinkerpop.apache.org/docs/current/reference/#graph-traversal-steps). Azure Cosmos DB's graph API is currently in public preview.
 
 ## About this sample: CRUD and Query using Gremlin in .NET
 
@@ -12,7 +12,7 @@ This sample shows how to setup your development environment with Azure Cosmos DB
 * Update the settings to Azure Cosmos DB account endpoint and keys in `App.config`, i.e. `<add key="Endpoint" value="https://FILLME.documents.azure.com:443/"/>` and `<add key="AuthKey" value="FILLME"/>`
 * Run the application
 
-We provide a walkthrough of the sample at [Get started with Azure Cosmos DB's Graph API using .NET](https://docs.microsoft.com/azure/cosmosdb/create-graph-dotnet.md)
+We provide a walkthrough of the sample at [Get started with Azure Cosmos DB's Graph API using .NET](https://docs.microsoft.com/azure/cosmos-db/create-graph-dotnet)
 
 ```cs
 // Azure Cosmos DB supports the Gremlin API for working with Graphs. Gremlin is a functional programming language composed of steps.
