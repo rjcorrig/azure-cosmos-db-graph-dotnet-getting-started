@@ -3,7 +3,7 @@
 
 ## About this sample: CRUD and Query using Gremlin in .NET
 
-![Graphs with Azure Cosmos DB](graph-gremlin.png) 
+![Graphs with Azure Cosmos DB](./graph-gremlin.png) 
 
 Azure Cosmos DB also provides first-party .NET and .NET Core libraries via Nuget that provide Gremlin extension methods on top of the Azure Cosmos DB SDKs. These libraries provide an "in-proc" Gremlin server that can be used to connect directly to Azure Cosmos DB data partitions.
 This sample shows how to setup your development environment with Azure Cosmos DB graph APIs, create a graph, adding, updating, and removing vertices and edges from the graph, and performing queries and traversals using Gremlin.
